@@ -1,8 +1,12 @@
 param (
 [string]$Branch = 'main',
-[string]$ImageName = 'glove80-zmk-config-docker'
+[string]$ImageName = 'glove80-zmk-config-docker',
+[switch]$Clipboard
 )
 
+if ($Clipboard) {
+    Set-Content -Path config\glove80.keymap -Value (Get-Clipboard)
+}
 
 docker build -t "$ImageName" .
 
