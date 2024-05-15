@@ -345,12 +345,12 @@
 
         layer_Cursor {
             bindings = <
-   &none      &none      &none      &none      &none                                                                           &none      &none      &none      &none        &none
- &kp ESC    &kp RET  &kp SPACE    &kp TAB    &kp DEL    &kp INS                                                    &kp INS   &kp DEL    &kp TAB  &kp SPACE  &sk LSHFT      &kp ESC
-   &none  &sk LSHFT  &kp LC(Y)  &kp LC(Z)   &kp BSPC  &kp LC(X)                                                  &kp PG_UP  &kp HOME     &kp UP    &kp END  &kp PG_UP        &none
-   &none      &none      &none      &none  &kp LC(A)  &kp LC(C)                                                  &kp PG_DN  &kp LEFT   &kp DOWN  &kp RIGHT  &kp PG_DN        &none
-   &none      &none      &none      &none      &none  &kp LC(V)  &trans  &trans  &trans  &trans  &trans  &trans    &kp RET  &kp BSPC  &kp LC(Z)  &kp LC(Y)  &kp K_APP  &kp LG(DOT)
-   &none     &trans     &trans     &trans     &trans             &trans  &trans  &trans  &trans  &trans  &trans               &trans     &trans     &trans     &trans        &none
+  &none      &none      &none      &none      &none                                                                           &none      &none      &none      &none        &none
+  &none      &none      &none      &none    &kp DEL    &kp INS                                                    &kp INS   &kp DEL    &kp TAB  &kp SPACE  &sk LSHFT      &kp ESC
+  &none    &kp RET  &kp SPACE    &kp TAB   &kp BSPC  &kp LC(X)                                                  &kp PG_UP  &kp HOME     &kp UP    &kp END  &kp PG_UP        &none
+  &none    &kp ESC  &kp LC(Y)  &kp LC(Z)  &kp LC(A)  &kp LC(C)                                                  &kp PG_DN  &kp LEFT   &kp DOWN  &kp RIGHT  &kp PG_DN        &none
+  &none  &sk LSHFT      &none      &none      &none  &kp LC(V)  &trans  &trans  &trans  &trans  &trans  &trans    &kp RET  &kp BSPC  &kp LC(Z)  &kp LC(Y)  &kp K_APP  &kp LG(DOT)
+  &none     &trans     &trans     &trans     &trans             &trans  &trans  &trans  &trans  &trans  &trans               &trans     &trans     &trans     &trans        &none
             >;
         };
 

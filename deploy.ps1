@@ -1,4 +1,4 @@
-Write-Host "Deploying Glove80 firmware..."
+Write-Warning "Deploying Glove80 firmware..."
 
 while( (Get-Volume | ? { $_.FileSystemLabel -eq 'GLV80RHBOOT' }) -eq $null )
 {
