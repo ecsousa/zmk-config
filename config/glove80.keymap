@@ -22,15 +22,14 @@
 
 /* Automatically generated layer name #define */
 #define LAYER_QWERTY 0
-#define LAYER_Right_Mod 1
-#define LAYER_Left_Mod 2
-#define LAYER_Cursor 3
-#define LAYER_Number 4
-#define LAYER_Symbol 5
-#define LAYER_System 6
-#define LAYER_Factory 7
-#define LAYER_Lower 8
-#define LAYER_Magic 9
+#define LAYER_Accents 1
+#define LAYER_Cursor 2
+#define LAYER_Number 3
+#define LAYER_Symbol 4
+#define LAYER_System 5
+#define LAYER_Factory 6
+#define LAYER_Lower 7
+#define LAYER_Magic 8
 
 /* To deal with the situation where there is no Lower layer, to keep &lower happy */
 #ifndef LAYER_Lower
@@ -288,44 +287,33 @@
 
         layer_QWERTY {
             bindings = <
-               &kp F1    &kp F2     &kp F3    &kp F4  &kp F5                                                                              &kp F6     &kp F7     &kp F8    &kp F9   &kp F10
-            &kp PG_UP    &kp N1     &kp N2    &kp N3  &kp N4  &kp N5                                                              &kp N6  &kp N7     &kp N8     &kp N9    &kp N0   &kp F11
-            &kp PG_DN     &kp Q      &kp W     &kp E   &kp R   &kp T                                                               &kp Y   &kp U      &kp I      &kp O     &kp P   &kp F12
-              &kp ESC     &kp A      &kp S     &kp D   &kp F   &kp G                                                               &kp H   &kp J      &kp K      &kp L  &kp SEMI  &kp HOME
-           &caps_word     &kp Z      &kp X     &kp C   &kp V   &kp B   &kp TAB   &kp LBKT   &sl 4    &mo 5   &kp RBKT    &kp DEL   &kp N   &kp M  &kp COMMA    &kp DOT  &kp FSLH   &kp END
- &magic LAYER_Magic 0  &kp LGUI  &kp LCTRL  &kp LALT   &mo 2          &kp BSPC  &kp LSHFT   &mo 3  &kp RET  &kp LSHFT  &kp SPACE           &mo 1   &kp LALT  &kp LCTRL  &kp LGUI    &lower
+               &kp F1   &kp F2     &kp F3    &kp F4    &kp F5                                                                                &kp F6     &kp F7     &kp F8    &kp F9   &kp F10
+            &kp PG_UP   &kp N1     &kp N2    &kp N3    &kp N4  &kp N5                                                              &kp N6    &kp N7     &kp N8     &kp N9    &kp N0   &kp F11
+            &kp PG_DN    &kp Q      &kp W     &kp E     &kp R   &kp T                                                               &kp Y     &kp U      &kp I      &kp O     &kp P   &kp F12
+              &kp ESC    &kp A      &kp S     &kp D     &kp F   &kp G                                                               &kp H     &kp J      &kp K      &kp L  &kp SEMI  &kp HOME
+           &caps_word    &kp Z      &kp X     &kp C     &kp V   &kp B     &mo 1   &kp LBKT   &sl 3    &mo 4   &kp RBKT      &mo 1   &kp N     &kp M  &kp COMMA    &kp DOT  &kp FSLH   &kp END
+ &magic LAYER_Magic 0  &kp TAB  &kp LCTRL  &kp LGUI  &kp LALT          &kp BSPC  &kp LSHFT   &mo 2  &kp RET  &kp LSHFT  &kp SPACE          &kp LALT   &kp LGUI  &kp LCTRL   &kp DEL    &lower
             >;
         };
 
-        layer_Right_Mod {
+        layer_Accents {
             bindings = <
- &trans               &trans          &trans                     &trans               &trans                                                                    &trans  &trans  &trans  &trans  &trans
- &trans               &trans          &trans                     &trans               &trans    &trans                                                  &trans  &trans  &trans  &trans  &trans  &trans
- &trans       &world_a_grave        &kp EXCL             &world_e_acute  &world_e_circumflex    &kp AT                                                  &trans  &trans  &trans  &trans  &trans  &trans
- &trans       &world_a_acute       &kp QMARK                   &kp LPAR             &kp RPAR  &kp BSLH                                                  &trans  &trans  &trans  &trans  &trans  &trans
- &trans  &world_a_circumflex  &world_a_tilde  &world_consonants_cedilla       &world_o_tilde  &kp PIPE  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
- &trans               &trans          &trans                     &trans               &trans            &trans  &trans  &trans  &trans  &trans  &trans           &none  &trans  &trans  &trans  &trans
-            >;
-        };
-
-        layer_Left_Mod {
-            bindings = <
- &trans  &trans  &trans  &trans  &trans                                                                             &trans          &trans               &trans  &trans  &trans
- &trans  &trans  &trans  &trans  &trans  &trans                                                     &trans          &trans          &trans               &trans  &trans  &trans
- &trans  &trans  &trans  &trans  &trans  &trans                                                  &kp TILDE  &world_u_acute  &world_i_acute       &world_o_acute  &trans  &trans
- &trans  &trans  &trans  &trans  &trans  &trans                                                  &kp MINUS        &kp PLUS         &kp DQT  &world_o_circumflex  &trans  &trans
- &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &kp UNDER       &kp EQUAL         &kp SQT            &kp GRAVE  &trans  &trans
- &trans  &trans  &trans  &trans   &none          &trans  &trans  &trans  &trans  &trans  &trans                     &trans          &trans               &trans  &trans  &trans
+ &trans               &trans          &trans                     &trans               &trans                                                                               &trans          &trans               &trans  &trans  &trans
+ &trans               &trans          &trans                     &trans               &trans    &trans                                                     &trans          &trans          &trans               &trans  &trans  &trans
+ &trans       &world_a_grave        &kp EXCL             &world_e_acute  &world_e_circumflex    &kp AT                                                  &kp TILDE  &world_u_acute  &world_i_acute       &world_o_acute  &trans  &trans
+ &trans       &world_a_acute       &kp QMARK                   &kp LPAR             &kp RPAR  &kp PIPE                                                  &kp MINUS        &kp PLUS         &kp DQT  &world_o_circumflex  &trans  &trans
+ &trans  &world_a_circumflex  &world_o_tilde  &world_consonants_cedilla       &world_a_tilde  &kp BSLH  &trans  &trans  &trans  &trans  &trans  &trans  &kp UNDER       &kp EQUAL         &kp SQT            &kp GRAVE  &trans  &trans
+ &trans               &trans          &trans                     &trans               &trans            &trans  &trans  &trans  &trans  &trans  &trans                     &trans          &trans               &trans  &trans  &trans
             >;
         };
 
         layer_Cursor {
             bindings = <
   &none      &none      &none      &none      &none                                                                           &none      &none      &none      &none        &none
-  &none      &none      &none    &kp TAB    &kp DEL    &kp INS                                                    &kp INS   &kp DEL    &kp TAB  &kp SPACE  &sk LSHFT      &kp ESC
-  &none    &kp ESC  &kp SPACE    &kp RET   &kp BSPC  &kp LC(X)                                                  &kp PG_UP  &kp HOME     &kp UP    &kp END  &kp PG_UP        &none
-  &none   &kp LGUI   &kp LALT  &kp LCTRL  &kp LSHFT  &kp LC(V)                                                  &kp PG_DN  &kp LEFT   &kp DOWN  &kp RIGHT  &kp PG_DN        &none
-  &none  &sk LSHFT  &kp LC(Y)  &kp LC(Z)  &kp LC(A)  &kp LC(C)  &trans  &trans  &trans  &trans  &trans  &trans    &kp RET  &kp BSPC  &kp LC(Z)  &kp LC(Y)  &kp K_APP  &kp LG(DOT)
+  &none      &none      &none    &kp TAB    &kp DEL    &kp INS                                                   &kp INS    &kp DEL    &kp TAB  &kp SPACE  &sk LSHFT      &kp ESC
+  &none    &kp ESC  &kp SPACE    &kp RET   &kp BSPC  &kp LC(X)                                                  &kp HOME  &kp PG_UP  &kp PG_DN    &kp END  &kp PG_UP        &none
+  &none   &kp LGUI   &kp LALT  &kp LCTRL  &kp LSHFT  &kp LC(V)                                                  &kp LEFT   &kp DOWN     &kp UP  &kp RIGHT  &kp PG_DN        &none
+  &none  &sk LSHFT  &kp LC(Y)  &kp LC(Z)  &kp LC(A)  &kp LC(C)  &trans  &trans  &trans  &trans  &trans  &trans   &kp RET   &kp BSPC  &kp LC(Z)  &kp LC(Y)  &kp K_APP  &kp LG(DOT)
   &none     &trans     &trans     &trans     &trans             &trans  &trans  &trans  &trans  &trans  &trans               &trans     &trans     &trans     &trans        &none
             >;
         };
@@ -391,7 +379,7 @@
        &none            &none            &none            &none            &none            &none                                                         &none   &none   &none   &none   &none           &none
        &none  &rgb_ug RGB_SPI  &rgb_ug RGB_SAI  &rgb_ug RGB_HUI  &rgb_ug RGB_BRI  &rgb_ug RGB_TOG                                                         &none   &none   &none   &none   &none           &none
  &bootloader  &rgb_ug RGB_SPD  &rgb_ug RGB_SAD  &rgb_ug RGB_HUD  &rgb_ug RGB_BRD  &rgb_ug RGB_EFF                                                         &none   &none   &none   &none   &none     &bootloader
-  &sys_reset            &none            &none            &none            &none            &none   &bt_2   &bt_3        &tog 7   &none   &none   &none   &none   &none   &none   &none   &none      &sys_reset
+  &sys_reset            &none            &none            &none            &none            &none   &bt_2   &bt_3        &tog 6   &none   &none   &none   &none   &none   &none   &none   &none      &sys_reset
        &none            &none            &none            &none            &none                    &bt_0   &bt_1  &out OUT_USB   &none   &none   &none           &none   &none   &none   &none           &none
             >;
         };
