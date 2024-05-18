@@ -63,4 +63,5 @@ macros {
 
 #include "world_base.dtsi"
 #include "world_windows.dtsi"
+#include "world_macos.dtsi"
 
