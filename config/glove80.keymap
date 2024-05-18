@@ -287,23 +287,23 @@
 
         layer_QWERTY {
             bindings = <
-               &kp F1   &kp F2     &kp F3    &kp F4    &kp F5                                                                                &kp F6     &kp F7     &kp F8    &kp F9   &kp F10
-            &kp PG_UP   &kp N1     &kp N2    &kp N3    &kp N4  &kp N5                                                              &kp N6    &kp N7     &kp N8     &kp N9    &kp N0   &kp F11
-            &kp PG_DN    &kp Q      &kp W     &kp E     &kp R   &kp T                                                               &kp Y     &kp U      &kp I      &kp O     &kp P   &kp F12
-              &kp ESC    &kp A      &kp S     &kp D     &kp F   &kp G                                                               &kp H     &kp J      &kp K      &kp L  &kp SEMI  &kp HOME
-           &caps_word    &kp Z      &kp X     &kp C     &kp V   &kp B     &mo 1   &kp LBKT   &sl 3    &mo 4   &kp RBKT      &mo 1   &kp N     &kp M  &kp COMMA    &kp DOT  &kp FSLH   &kp END
- &magic LAYER_Magic 0  &kp TAB  &kp LCTRL  &kp LGUI  &kp LALT          &kp BSPC  &kp LSHFT   &mo 2  &kp RET  &kp LSHFT  &kp SPACE          &kp LALT   &kp LGUI  &kp LCTRL   &kp DEL    &lower
+               &kp F1   &kp F2     &kp F3    &kp F4    &kp F5                                                                                 &kp F6     &kp F7     &kp F8    &kp F9   &kp F10
+            &kp PG_UP   &kp N1     &kp N2    &kp N3    &kp N4  &kp N5                                                               &kp N6    &kp N7     &kp N8     &kp N9    &kp N0   &kp F11
+            &kp PG_DN    &kp Q      &kp W     &kp E     &kp R   &kp T                                                                &kp Y     &kp U      &kp I      &kp O     &kp P   &kp F12
+              &kp ESC    &kp A      &kp S     &kp D     &kp F   &kp G                                                                &kp H     &kp J      &kp K      &kp L  &kp SEMI  &kp HOME
+           &caps_word    &kp Z      &kp X     &kp C     &kp V   &kp B     &mo 1      &mo 3   &sl 4  &kp LBKT   &kp RBKT      &mo 1   &kp N     &kp M  &kp COMMA    &kp DOT  &kp FSLH   &kp END
+ &magic LAYER_Magic 0  &kp TAB  &kp LCTRL  &kp LGUI  &kp LALT          &kp BSPC  &kp LSHFT   &mo 2   &kp RET  &kp LSHFT  &kp SPACE          &kp LALT   &kp LGUI  &kp LCTRL   &kp DEL    &lower
             >;
         };
 
         layer_Accents {
             bindings = <
- &trans               &trans          &trans                     &trans               &trans                                                                               &trans          &trans               &trans  &trans  &trans
- &trans               &trans          &trans                     &trans               &trans    &trans                                                     &trans          &trans          &trans               &trans  &trans  &trans
- &trans       &world_a_grave        &kp EXCL             &world_e_acute  &world_e_circumflex    &kp AT                                                  &kp TILDE  &world_u_acute  &world_i_acute       &world_o_acute  &trans  &trans
- &trans       &world_a_acute       &kp QMARK                   &kp LPAR             &kp RPAR  &kp PIPE                                                  &kp MINUS        &kp PLUS         &kp DQT  &world_o_circumflex  &trans  &trans
- &trans  &world_a_circumflex  &world_o_tilde  &world_consonants_cedilla       &world_a_tilde  &kp BSLH  &trans  &trans  &trans  &trans  &trans  &trans  &kp UNDER       &kp EQUAL         &kp SQT            &kp GRAVE  &trans  &trans
- &trans               &trans          &trans                     &trans               &trans            &trans  &trans  &trans  &trans  &trans  &trans                     &trans          &trans               &trans  &trans  &trans
+ &trans                   &trans              &trans                         &trans                   &trans                                                                                   &trans              &trans                   &trans  &trans  &trans
+ &trans                   &trans              &trans                         &trans                   &trans    &trans                                                     &trans              &trans              &trans                   &trans  &trans  &trans
+ &trans       &world_a_grave_win            &kp EXCL             &world_e_acute_win  &world_e_circumflex_win    &kp AT                                                  &kp TILDE  &world_u_acute_win  &world_i_acute_win       &world_o_acute_win  &trans  &trans
+ &trans       &world_a_acute_win           &kp QMARK                       &kp LPAR                 &kp RPAR  &kp PIPE                                                  &kp MINUS            &kp PLUS             &kp DQT  &world_o_circumflex_win  &trans  &trans
+ &trans  &world_a_circumflex_win  &world_o_tilde_win  &world_consonants_cedilla_win       &world_a_tilde_win  &kp BSLH  &trans  &trans  &trans  &trans  &trans  &trans  &kp UNDER           &kp EQUAL             &kp SQT                &kp GRAVE  &trans  &trans
+ &trans                   &trans              &trans                         &trans                   &trans            &trans  &trans  &trans  &trans  &trans  &trans                         &trans              &trans                   &trans  &trans  &trans
             >;
         };
 

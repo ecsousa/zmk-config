@@ -1,4 +1,3 @@
-#define OPERATING_SYSTEM 'W' // Windows
 
 behaviors {
     ht: hold_tap {
@@ -62,5 +61,6 @@ macros {
     )
 };
 
-#include "world.dtsi"
+#include "world_base.dtsi"
+#include "world_windows.dtsi"
 

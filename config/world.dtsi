@@ -1126,9 +1126,5 @@ UNICODE_MORPH_MODS
         mods = <MOD_LSFT>;
     };
 
-    //
-    // transforms
-    //
-
 };
 

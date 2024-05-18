@@ -1,0 +1,24 @@
+//
+// UNICODE_TAP_DELAY defines how long the macro waits (milliseconds)
+// between keystrokes while inputting the Unicode codepoint shortcut.
+//
+#ifndef UNICODE_TAP_DELAY
+#define UNICODE_TAP_DELAY 1
+#endif
+
+//
+// UNICODE_SEQ_DELAY defines how long the macro waits (milliseconds)
+// between emitting Unicode codepoints in multi-codepoint characters.
+//
+#ifndef UNICODE_SEQ_DELAY
+#define UNICODE_SEQ_DELAY 10
+#endif
+
+#define UNICODE(name, ...) \
+    ZMK_MACRO(name, \
+        wait-ms = <UNICODE_TAP_DELAY>; \
+        tap-ms = <UNICODE_TAP_DELAY>; \
+        bindings = __VA_ARGS__; \
+    )
+
+
