@@ -23,20 +23,16 @@
 /* Automatically generated layer name #define */
 #define LAYER_QWERTY 0
 #define LAYER_QWERTY_MacOS 1
-#define LAYER_ColemakDH 2
-#define LAYER_ColemakDH_MacOS 3
-#define LAYER_Accents 4
-#define LAYER_Accents_CM 5
-#define LAYER_Accents_MacOS 6
-#define LAYER_Accents_CM_MacOS 7
-#define LAYER_Cursor 8
-#define LAYER_Cursor_MacOS 9
-#define LAYER_Number 10
-#define LAYER_Number_MacOS 11
-#define LAYER_System 12
-#define LAYER_Factory 13
-#define LAYER_Lower 14
-#define LAYER_Magic 15
+#define LAYER_Accents 2
+#define LAYER_Accents_MacOS 3
+#define LAYER_Cursor 4
+#define LAYER_Cursor_MacOS 5
+#define LAYER_Number 6
+#define LAYER_Number_MacOS 7
+#define LAYER_System 8
+#define LAYER_Factory 9
+#define LAYER_Lower 10
+#define LAYER_Magic 11
 
 /* To deal with the situation where there is no Lower layer, to keep &lower happy */
 #ifndef LAYER_Lower
@@ -294,89 +290,45 @@
 
         layer_QWERTY {
             bindings = <
-               &kp F1   &kp F2     &kp F3    &kp F4    &kp F5                                                                                  &kp F6     &kp F7     &kp F8    &kp F9   &kp F10
-            &kp PG_UP   &kp N1     &kp N2    &kp N3    &kp N4  &kp N5                                                                &kp N6    &kp N7     &kp N8     &kp N9    &kp N0   &kp F11
-            &kp PG_DN    &kp Q      &kp W     &kp E     &kp R   &kp T                                                                 &kp Y     &kp U      &kp I      &kp O     &kp P   &kp F12
-              &kp ESC    &kp A      &kp S     &kp D     &kp F   &kp G                                                                 &kp H     &kp J      &kp K      &kp L  &kp SEMI  &kp HOME
-           &caps_word    &kp Z      &kp X     &kp C     &kp V   &kp B     &mo 4     &mo 10  &kp ESC  &kp LBKT   &kp RBKT      &mo 4   &kp N     &kp M  &kp COMMA    &kp DOT  &kp FSLH   &kp END
- &magic LAYER_Magic 0  &kp TAB  &kp LCTRL  &kp LGUI  &kp LALT          &kp BSPC  &kp LSHFT    &mo 8   &kp RET  &kp LSHFT  &kp SPACE          &kp LALT   &kp LGUI  &kp LCTRL   &kp DEL    &lower
+               &kp F1   &kp F2     &kp F3    &kp F4    &kp F5                                                                                 &kp F6     &kp F7     &kp F8    &kp F9   &kp F10
+            &kp PG_UP   &kp N1     &kp N2    &kp N3    &kp N4  &kp N5                                                               &kp N6    &kp N7     &kp N8     &kp N9    &kp N0   &kp F11
+            &kp PG_DN    &kp Q      &kp W     &kp E     &kp R   &kp T                                                                &kp Y     &kp U      &kp I      &kp O     &kp P   &kp F12
+              &kp ESC    &kp A      &kp S     &kp D     &kp F   &kp G                                                                &kp H     &kp J      &kp K      &kp L  &kp SEMI  &kp HOME
+           &caps_word    &kp Z      &kp X     &kp C     &kp V   &kp B   &kp ESC      &mo 6   &mo 4  &kp LBKT   &kp RBKT      &mo 2   &kp N     &kp M  &kp COMMA    &kp DOT  &kp FSLH   &kp END
+ &magic LAYER_Magic 0  &kp TAB  &kp LCTRL  &kp LGUI  &kp LALT          &kp BSPC  &kp LSHFT   &mo 2   &kp RET  &kp LSHFT  &kp SPACE          &kp LALT   &kp LGUI  &kp LCTRL   &kp DEL    &lower
             >;
         };
 
         layer_QWERTY_MacOS {
             bindings = <
-               &kp F1   &kp F2     &kp F3    &kp F4    &kp F5                                                                                  &kp F6     &kp F7     &kp F8    &kp F9   &kp F10
-            &kp PG_UP   &kp N1     &kp N2    &kp N3    &kp N4  &kp N5                                                                &kp N6    &kp N7     &kp N8     &kp N9    &kp N0   &kp F11
-            &kp PG_DN    &kp Q      &kp W     &kp E     &kp R   &kp T                                                                 &kp Y     &kp U      &kp I      &kp O     &kp P   &kp F12
-              &kp ESC    &kp A      &kp S     &kp D     &kp F   &kp G                                                                 &kp H     &kp J      &kp K      &kp L  &kp SEMI  &kp HOME
-           &caps_word    &kp Z      &kp X     &kp C     &kp V   &kp B     &mo 6     &mo 11  &kp ESC  &kp LBKT   &kp RBKT      &mo 6   &kp N     &kp M  &kp COMMA    &kp DOT  &kp FSLH   &kp END
- &magic LAYER_Magic 0  &kp TAB  &kp LCTRL  &kp LALT  &kp LGUI          &kp BSPC  &kp LSHFT    &mo 9   &kp RET  &kp LSHFT  &kp SPACE          &kp LGUI   &kp LALT  &kp LCTRL   &kp DEL    &lower
-            >;
-        };
-
-        layer_ColemakDH {
-            bindings = <
-               &kp F1   &kp F2     &kp F3    &kp F4    &kp F5                                                                                  &kp F6     &kp F7     &kp F8    &kp F9   &kp F10
-            &kp PG_UP   &kp N1     &kp N2    &kp N3    &kp N4  &kp N5                                                                &kp N6    &kp N7     &kp N8     &kp N9    &kp N0   &kp F11
-            &kp PG_DN    &kp Q      &kp W     &kp F     &kp P   &kp B                                                                 &kp J     &kp L      &kp U      &kp Y  &kp SEMI   &kp F12
-              &kp ESC    &kp A      &kp R     &kp S     &kp T   &kp G                                                                 &kp M     &kp N      &kp E      &kp I     &kp O  &kp HOME
-           &caps_word    &kp Z      &kp X     &kp C     &kp D   &kp V     &mo 5     &mo 10  &kp ESC  &kp LBKT   &kp RBKT      &mo 5   &kp K     &kp H  &kp COMMA    &kp DOT  &kp FSLH   &kp END
- &magic LAYER_Magic 0  &kp TAB  &kp LCTRL  &kp LGUI  &kp LALT          &kp BSPC  &kp LSHFT    &mo 8   &kp RET  &kp LSHFT  &kp SPACE          &kp LALT   &kp LGUI  &kp LCTRL   &kp DEL    &lower
-            >;
-        };
-
-        layer_ColemakDH_MacOS {
-            bindings = <
-               &kp F1   &kp F2     &kp F3    &kp F4    &kp F5                                                                                  &kp F6     &kp F7     &kp F8    &kp F9   &kp F10
-            &kp PG_UP   &kp N1     &kp N2    &kp N3    &kp N4  &kp N5                                                                &kp N6    &kp N7     &kp N8     &kp N9    &kp N0   &kp F11
-            &kp PG_DN    &kp Q      &kp W     &kp F     &kp P   &kp B                                                                 &kp J     &kp L      &kp U      &kp Y  &kp SEMI   &kp F12
-              &kp ESC    &kp A      &kp R     &kp S     &kp T   &kp G                                                                 &kp M     &kp N      &kp E      &kp I     &kp O  &kp HOME
-           &caps_word    &kp Z      &kp X     &kp C     &kp D   &kp V     &mo 7     &mo 10  &kp ESC  &kp LBKT   &kp RBKT      &mo 7   &kp K     &kp H  &kp COMMA    &kp DOT  &kp FSLH   &kp END
- &magic LAYER_Magic 0  &kp TAB  &kp LCTRL  &kp LALT  &kp LGUI          &kp BSPC  &kp LSHFT    &mo 8   &kp RET  &kp LSHFT  &kp SPACE          &kp LGUI   &kp LALT  &kp LCTRL   &kp DEL    &lower
+               &kp F1   &kp F2     &kp F3    &kp F4    &kp F5                                                                                 &kp F6     &kp F7     &kp F8    &kp F9   &kp F10
+            &kp PG_UP   &kp N1     &kp N2    &kp N3    &kp N4  &kp N5                                                               &kp N6    &kp N7     &kp N8     &kp N9    &kp N0   &kp F11
+            &kp PG_DN    &kp Q      &kp W     &kp E     &kp R   &kp T                                                                &kp Y     &kp U      &kp I      &kp O     &kp P   &kp F12
+              &kp ESC    &kp A      &kp S     &kp D     &kp F   &kp G                                                                &kp H     &kp J      &kp K      &kp L  &kp SEMI  &kp HOME
+           &caps_word    &kp Z      &kp X     &kp C     &kp V   &kp B   &kp ESC      &mo 7   &mo 5  &kp LBKT   &kp RBKT      &mo 3   &kp N     &kp M  &kp COMMA    &kp DOT  &kp FSLH   &kp END
+ &magic LAYER_Magic 0  &kp TAB  &kp LCTRL  &kp LALT  &kp LGUI          &kp BSPC  &kp LSHFT   &mo 3   &kp RET  &kp LSHFT  &kp SPACE          &kp LGUI   &kp LALT  &kp LCTRL   &kp DEL    &lower
             >;
         };
 
         layer_Accents {
             bindings = <
- &trans                   &trans              &trans                         &trans                   &trans                                                                                   &trans              &trans                   &trans  &trans  &trans
- &trans                   &trans              &trans                         &trans                   &trans    &trans                                                     &trans              &trans              &trans                   &trans  &trans  &trans
- &trans       &world_a_grave_win            &kp EXCL             &world_e_acute_win  &world_e_circumflex_win    &kp AT                                                  &kp TILDE  &world_u_acute_win  &world_i_acute_win       &world_o_acute_win  &trans  &trans
- &trans       &world_a_acute_win           &kp QMARK                       &kp LPAR                 &kp RPAR  &kp PIPE                                                  &kp MINUS            &kp PLUS             &kp DQT  &world_o_circumflex_win  &trans  &trans
- &trans  &world_a_circumflex_win  &world_o_tilde_win  &world_consonants_cedilla_win       &world_a_tilde_win  &kp BSLH  &trans  &trans  &trans  &trans  &trans  &trans  &kp UNDER           &kp EQUAL             &kp SQT                &kp GRAVE  &trans  &trans
- &trans                   &trans              &trans                         &trans                   &trans            &trans  &trans  &trans  &trans  &trans  &trans                         &trans              &trans                   &trans  &trans  &trans
-            >;
-        };
-
-        layer_Accents_CM {
-            bindings = <
- &trans                   &trans              &trans                         &trans              &trans                                                                                        &trans              &trans                   &trans              &trans  &trans
- &trans                   &trans              &trans                         &trans              &trans    &trans                                                     &trans                   &trans              &trans                   &trans              &trans  &trans
- &trans       &world_a_grave_win            &kp EXCL                       &kp PLUS             &kp DQT    &kp AT                                                  &kp TILDE  &world_e_circumflex_win  &world_u_acute_win  &world_o_circumflex_win              &trans  &trans
- &trans       &world_a_acute_win           &kp QMARK                       &kp LPAR            &kp RPAR  &kp PIPE                                                  &kp MINUS                 &kp PLUS  &world_e_acute_win       &world_i_acute_win  &world_o_acute_win  &trans
- &trans  &world_a_circumflex_win  &world_o_tilde_win  &world_consonants_cedilla_win  &world_a_tilde_win  &kp BSLH  &trans  &trans  &trans  &trans  &trans  &trans  &kp UNDER                &kp EQUAL             &kp SQT                &kp GRAVE              &trans  &trans
- &trans                   &trans              &trans                         &trans              &trans            &trans  &trans  &trans  &trans  &trans  &trans                              &trans              &trans                   &trans              &trans  &trans
+ &trans                   &trans              &trans                         &trans                   &trans                                                                                       &trans              &trans                   &trans     &trans  &trans
+ &trans                   &trans              &trans                         &trans                   &trans    &trans                                                         &trans              &trans              &trans                   &trans     &trans  &trans
+ &trans       &world_a_grave_win            &kp EXCL             &world_e_acute_win  &world_e_circumflex_win    &kp AT                                                      &kp TILDE  &world_u_acute_win  &world_i_acute_win       &world_o_acute_win  &kp GRAVE  &trans
+ &trans       &world_a_acute_win           &kp QMARK                       &kp LPAR                 &kp RPAR  &kp PIPE                                                      &kp MINUS            &kp PLUS             &kp DQT  &world_o_circumflex_win    &kp SQT  &trans
+ &trans  &world_a_circumflex_win  &world_o_tilde_win  &world_consonants_cedilla_win       &world_a_tilde_win  &kp BSLH  &trans  &trans  &trans  &kp LBRC  &kp RBRC  &trans  &kp UNDER           &kp EQUAL              &kp LT                   &kp GT     &trans  &trans
+ &trans                   &trans              &trans                         &trans                   &trans            &trans  &trans  &trans    &trans    &trans  &trans                         &trans              &trans                   &trans     &trans  &trans
             >;
         };
 
         layer_Accents_MacOS {
             bindings = <
- &trans                   &trans              &trans                         &trans                   &trans                                                                                   &trans              &trans                   &trans  &trans  &trans
- &trans                   &trans              &trans                         &trans                   &trans    &trans                                                     &trans              &trans              &trans                   &trans  &trans  &trans
- &trans       &world_a_grave_mac            &kp EXCL             &world_e_acute_mac  &world_e_circumflex_mac    &kp AT                                                  &kp TILDE  &world_u_acute_mac  &world_i_acute_mac       &world_o_acute_mac  &trans  &trans
- &trans       &world_a_acute_mac           &kp QMARK                       &kp LPAR                 &kp RPAR  &kp PIPE                                                  &kp MINUS            &kp PLUS             &kp DQT  &world_o_circumflex_mac  &trans  &trans
- &trans  &world_a_circumflex_mac  &world_o_tilde_mac  &world_consonants_cedilla_mac       &world_a_tilde_mac  &kp BSLH  &trans  &trans  &trans  &trans  &trans  &trans  &kp UNDER           &kp EQUAL             &kp SQT                &kp GRAVE  &trans  &trans
- &trans                   &trans              &trans                         &trans                   &trans            &trans  &trans  &trans  &trans  &trans  &trans                         &trans              &trans                   &trans  &trans  &trans
-            >;
-        };
-
-        layer_Accents_CM_MacOS {
-            bindings = <
- &trans                   &trans              &trans                         &trans              &trans                                                                                        &trans              &trans                   &trans              &trans  &trans
- &trans                   &trans              &trans                         &trans              &trans    &trans                                                     &trans                   &trans              &trans                   &trans              &trans  &trans
- &trans       &world_a_grave_win            &kp EXCL                       &kp PLUS             &kp DQT    &kp AT                                                  &kp TILDE  &world_e_circumflex_win  &world_u_acute_win  &world_o_circumflex_win              &trans  &trans
- &trans       &world_a_acute_win           &kp QMARK                       &kp LPAR            &kp RPAR  &kp PIPE                                                  &kp MINUS                 &kp PLUS  &world_e_acute_win       &world_i_acute_win  &world_o_acute_win  &trans
- &trans  &world_a_circumflex_win  &world_o_tilde_win  &world_consonants_cedilla_win  &world_a_tilde_win  &kp BSLH  &trans  &trans  &trans  &trans  &trans  &trans  &kp UNDER                &kp EQUAL             &kp SQT                &kp GRAVE              &trans  &trans
- &trans                   &trans              &trans                         &trans              &trans            &trans  &trans  &trans  &trans  &trans  &trans                              &trans              &trans                   &trans              &trans  &trans
+ &trans                   &trans              &trans                         &trans                   &trans                                                                                       &trans              &trans                   &trans     &trans  &trans
+ &trans                   &trans              &trans                         &trans                   &trans    &trans                                                         &trans              &trans              &trans                   &trans     &trans  &trans
+ &trans       &world_a_grave_mac            &kp EXCL             &world_e_acute_mac  &world_e_circumflex_mac    &kp AT                                                      &kp TILDE  &world_u_acute_mac  &world_i_acute_mac       &world_o_acute_mac  &kp GRAVE  &trans
+ &trans       &world_a_acute_mac           &kp QMARK                       &kp LPAR                 &kp RPAR  &kp PIPE                                                      &kp MINUS            &kp PLUS             &kp DQT  &world_o_circumflex_mac    &kp SQT  &trans
+ &trans  &world_a_circumflex_mac  &world_o_tilde_mac  &world_consonants_cedilla_mac       &world_a_tilde_mac  &kp BSLH  &trans  &trans  &trans  &kp LBRC  &kp RBRC  &trans  &kp UNDER           &kp EQUAL              &kp LT                   &kp GT     &trans  &trans
+ &trans                   &trans              &trans                         &trans                   &trans            &trans  &trans  &trans    &trans    &trans  &trans                         &trans              &trans                   &trans     &trans  &trans
             >;
         };
 
@@ -460,10 +412,10 @@
         layer_Magic {
             bindings = <
   &bt BT_CLR            &none            &none            &none            &none                                                                                  &none   &none   &none   &none  &bt BT_CLR_ALL
-       &to 0            &to 1            &to 2            &to 3            &none            &none                                                         &none   &none   &none   &none   &none           &none
+       &to 0            &to 1            &none            &none            &none            &none                                                         &none   &none   &none   &none   &none           &none
        &none  &rgb_ug RGB_SPI  &rgb_ug RGB_SAI  &rgb_ug RGB_HUI  &rgb_ug RGB_BRI  &rgb_ug RGB_TOG                                                         &none   &none   &none   &none   &none           &none
  &bootloader  &rgb_ug RGB_SPD  &rgb_ug RGB_SAD  &rgb_ug RGB_HUD  &rgb_ug RGB_BRD  &rgb_ug RGB_EFF                                                         &none   &none   &none   &none   &none     &bootloader
-  &sys_reset            &none            &none            &none            &none            &none   &bt_2   &bt_3       &tog 13   &none   &none   &none   &none   &none   &none   &none   &none      &sys_reset
+  &sys_reset            &none            &none            &none            &none            &none   &bt_2   &bt_3        &tog 9   &none   &none   &none   &none   &none   &none   &none   &none      &sys_reset
        &none            &none            &none            &none            &none                    &bt_0   &bt_1  &out OUT_USB   &none   &none   &none           &none   &none   &none   &none           &none
             >;
         };
