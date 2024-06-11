@@ -23,16 +23,17 @@
 /* Automatically generated layer name #define */
 #define LAYER_QWERTY 0
 #define LAYER_QWERTY_MacOS 1
-#define LAYER_Accents 2
-#define LAYER_Accents_MacOS 3
-#define LAYER_Cursor 4
-#define LAYER_Cursor_MacOS 5
-#define LAYER_Number 6
-#define LAYER_Number_MacOS 7
-#define LAYER_System 8
-#define LAYER_Factory 9
-#define LAYER_Lower 10
-#define LAYER_Magic 11
+#define LAYER_Symbols 2
+#define LAYER_Accents 3
+#define LAYER_Accents_MacOS 4
+#define LAYER_Cursor 5
+#define LAYER_Cursor_MacOS 6
+#define LAYER_Number 7
+#define LAYER_Number_MacOS 8
+#define LAYER_System 9
+#define LAYER_Factory 10
+#define LAYER_Lower 11
+#define LAYER_Magic 12
 
 /* To deal with the situation where there is no Lower layer, to keep &lower happy */
 #ifndef LAYER_Lower
@@ -290,45 +291,56 @@
 
         layer_QWERTY {
             bindings = <
-               &kp F1   &kp F2     &kp F3    &kp F4    &kp F5                                                                                 &kp F6     &kp F7     &kp F8    &kp F9   &kp F10
-            &kp PG_UP   &kp N1     &kp N2    &kp N3    &kp N4  &kp N5                                                               &kp N6    &kp N7     &kp N8     &kp N9    &kp N0   &kp F11
-            &kp PG_DN    &kp Q      &kp W     &kp E     &kp R   &kp T                                                                &kp Y     &kp U      &kp I      &kp O     &kp P   &kp F12
-              &kp ESC    &kp A      &kp S     &kp D     &kp F   &kp G                                                                &kp H     &kp J      &kp K      &kp L  &kp SEMI  &kp HOME
-           &caps_word    &kp Z      &kp X     &kp C     &kp V   &kp B   &kp ESC      &mo 6   &mo 4  &kp LBKT   &kp RBKT      &mo 2   &kp N     &kp M  &kp COMMA    &kp DOT  &kp FSLH   &kp END
- &magic LAYER_Magic 0  &kp TAB  &kp LCTRL  &kp LGUI  &kp LALT          &kp BSPC  &kp LSHFT   &mo 2   &kp RET  &kp LSHFT  &kp SPACE          &kp LALT   &kp LGUI  &kp LCTRL   &kp DEL    &lower
+               &kp F1   &kp F2      &kp F3       &kp F4               &kp F5                                                                                           &kp F6       &kp F7      &kp F8    &kp F9               &kp F10
+            &kp PG_UP   &kp N1      &kp N2       &kp N3               &kp N4  &kp N5                                                              &kp N6               &kp N7       &kp N8      &kp N9    &kp N0               &kp F11
+            &kp PG_DN    &kp Q       &kp W        &kp E                &kp R   &kp T                                                               &kp Y                &kp U        &kp I       &kp O     &kp P               &kp F12
+              &kp ESC    &kp A  &ht LALT S  &ht LCTRL D          &ht LSHFT F   &kp G                                                               &kp H         &ht  LSHFT J  &ht LCTRL K  &ht LALT L  &kp SEMI              &kp HOME
+           &caps_word    &kp Z       &kp X        &kp C  &lt LAYER_Accents V   &kp B   &kp ESC      &mo 7   &mo 5   &lower   &kp LBKT   &kp RBKT   &kp N  &lt LAYER_Accents M    &kp COMMA     &kp DOT  &kp FSLH               &kp END
+ &magic LAYER_Magic 0  &kp TAB   &kp LCTRL     &kp LGUI             &kp LALT          &kp BSPC  &kp LSHFT   &mo 3  &kp RET  &kp LSHFT  &kp SPACE                     &kp LALT     &kp LGUI   &kp LCTRL   &kp DEL  &magic LAYER_Magic 0
             >;
         };
 
         layer_QWERTY_MacOS {
             bindings = <
-               &kp F1   &kp F2     &kp F3    &kp F4    &kp F5                                                                                 &kp F6     &kp F7     &kp F8    &kp F9   &kp F10
-            &kp PG_UP   &kp N1     &kp N2    &kp N3    &kp N4  &kp N5                                                               &kp N6    &kp N7     &kp N8     &kp N9    &kp N0   &kp F11
-            &kp PG_DN    &kp Q      &kp W     &kp E     &kp R   &kp T                                                                &kp Y     &kp U      &kp I      &kp O     &kp P   &kp F12
-              &kp ESC    &kp A      &kp S     &kp D     &kp F   &kp G                                                                &kp H     &kp J      &kp K      &kp L  &kp SEMI  &kp HOME
-           &caps_word    &kp Z      &kp X     &kp C     &kp V   &kp B   &kp ESC      &mo 7   &mo 5  &kp LBKT   &kp RBKT      &mo 3   &kp N     &kp M  &kp COMMA    &kp DOT  &kp FSLH   &kp END
- &magic LAYER_Magic 0  &kp TAB  &kp LCTRL  &kp LALT  &kp LGUI          &kp BSPC  &kp LSHFT   &mo 3   &kp RET  &kp LSHFT  &kp SPACE          &kp LGUI   &kp LALT  &kp LCTRL   &kp DEL    &lower
+               &kp F1   &kp F2     &kp F3    &kp F4    &kp F5                                                                                &kp F6     &kp F7     &kp F8    &kp F9               &kp F10
+            &kp PG_UP   &kp N1     &kp N2    &kp N3    &kp N4  &kp N5                                                              &kp N6    &kp N7     &kp N8     &kp N9    &kp N0               &kp F11
+            &kp PG_DN    &kp Q      &kp W     &kp E     &kp R   &kp T                                                               &kp Y     &kp U      &kp I      &kp O     &kp P               &kp F12
+              &kp ESC    &kp A      &kp S     &kp D     &kp F   &kp G                                                               &kp H     &kp J      &kp K      &kp L  &kp SEMI              &kp HOME
+           &caps_word    &kp Z      &kp X     &kp C     &kp V   &kp B   &kp ESC      &mo 8   &mo 6   &lower   &kp LBKT   &kp RBKT   &kp N     &kp M  &kp COMMA    &kp DOT  &kp FSLH               &kp END
+ &magic LAYER_Magic 0  &kp TAB  &kp LCTRL  &kp LALT  &kp LGUI          &kp BSPC  &kp LSHFT   &mo 4  &kp RET  &kp LSHFT  &kp SPACE          &kp LGUI   &kp LALT  &kp LCTRL   &kp DEL  &magic LAYER_Magic 0
+            >;
+        };
+
+        layer_Symbols {
+            bindings = <
+ &trans                   &trans              &trans                         &trans                   &trans                                                                                       &trans              &trans              &trans                   &trans  &trans
+ &trans                   &trans              &trans                         &trans                   &trans    &trans                                                      &kp GRAVE              &trans              &trans              &trans                   &trans  &trans
+ &trans       &world_a_grave_win            &kp EXCL             &world_e_acute_win  &world_e_circumflex_win    &kp AT                                                      &kp TILDE  &world_u_acute_win  &world_i_acute_win  &world_o_acute_win  &world_o_circumflex_win  &trans
+ &trans       &world_a_acute_win           &kp QMARK                       &kp LPAR                 &kp RPAR  &kp PIPE                                                      &kp MINUS            &kp PLUS             &kp DQT             &kp SQT                &kp COLON  &trans
+ &trans  &world_a_circumflex_win  &world_o_tilde_win  &world_consonants_cedilla_win       &world_a_tilde_win  &kp BSLH  &trans  &trans  &trans  &trans  &kp LBRC  &kp RBRC  &kp UNDER           &kp EQUAL              &kp LT              &kp GT                &kp QMARK  &trans
+ &trans                   &trans              &trans                         &trans                   &trans            &trans  &trans  &trans  &trans    &trans    &trans                         &trans              &trans              &trans                   &trans  &trans
             >;
         };
 
         layer_Accents {
             bindings = <
- &trans                   &trans              &trans                         &trans                   &trans                                                                                       &trans              &trans                   &trans     &trans  &trans
- &trans                   &trans              &trans                         &trans                   &trans    &trans                                                         &trans              &trans              &trans                   &trans     &trans  &trans
- &trans       &world_a_grave_win            &kp EXCL             &world_e_acute_win  &world_e_circumflex_win    &kp AT                                                      &kp TILDE  &world_u_acute_win  &world_i_acute_win       &world_o_acute_win  &kp GRAVE  &trans
- &trans       &world_a_acute_win           &kp QMARK                       &kp LPAR                 &kp RPAR  &kp PIPE                                                      &kp MINUS            &kp PLUS             &kp DQT  &world_o_circumflex_win    &kp SQT  &trans
- &trans  &world_a_circumflex_win  &world_o_tilde_win  &world_consonants_cedilla_win       &world_a_tilde_win  &kp BSLH  &trans  &trans  &trans  &kp LBRC  &kp RBRC  &trans  &kp UNDER           &kp EQUAL              &kp LT                   &kp GT     &trans  &trans
- &trans                   &trans              &trans                         &trans                   &trans            &trans  &trans  &trans    &trans    &trans  &trans                         &trans              &trans                   &trans     &trans  &trans
+ &trans                   &trans              &trans                         &trans                   &trans                                                                              &trans              &trans              &trans                   &trans  &trans
+ &trans                   &trans              &trans                         &trans                   &trans  &trans                                                  &trans              &trans              &trans              &trans                   &trans  &trans
+ &trans       &world_a_grave_win              &trans             &world_e_acute_win  &world_e_circumflex_win  &trans                                                  &trans  &world_u_acute_win  &world_i_acute_win  &world_o_acute_win  &world_o_circumflex_win  &trans
+ &trans       &world_a_acute_win              &trans                         &trans                   &trans  &trans                                                  &trans              &trans              &trans              &trans                   &trans  &trans
+ &trans  &world_a_circumflex_win  &world_o_tilde_win  &world_consonants_cedilla_win       &world_a_tilde_win  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans              &trans              &trans              &trans                   &trans  &trans
+ &trans                   &trans              &trans                         &trans                   &trans          &trans  &trans  &trans  &trans  &trans  &trans                      &trans              &trans              &trans                   &trans  &trans
             >;
         };
 
         layer_Accents_MacOS {
             bindings = <
- &trans                   &trans              &trans                         &trans                   &trans                                                                                       &trans              &trans                   &trans     &trans  &trans
- &trans                   &trans              &trans                         &trans                   &trans    &trans                                                         &trans              &trans              &trans                   &trans     &trans  &trans
- &trans       &world_a_grave_mac            &kp EXCL             &world_e_acute_mac  &world_e_circumflex_mac    &kp AT                                                      &kp TILDE  &world_u_acute_mac  &world_i_acute_mac       &world_o_acute_mac  &kp GRAVE  &trans
- &trans       &world_a_acute_mac           &kp QMARK                       &kp LPAR                 &kp RPAR  &kp PIPE                                                      &kp MINUS            &kp PLUS             &kp DQT  &world_o_circumflex_mac    &kp SQT  &trans
- &trans  &world_a_circumflex_mac  &world_o_tilde_mac  &world_consonants_cedilla_mac       &world_a_tilde_mac  &kp BSLH  &trans  &trans  &trans  &kp LBRC  &kp RBRC  &trans  &kp UNDER           &kp EQUAL              &kp LT                   &kp GT     &trans  &trans
- &trans                   &trans              &trans                         &trans                   &trans            &trans  &trans  &trans    &trans    &trans  &trans                         &trans              &trans                   &trans     &trans  &trans
+ &trans                   &trans              &trans                         &trans                   &trans                                                                                       &trans              &trans              &trans                   &trans  &trans
+ &trans                   &trans              &trans                         &trans                   &trans    &trans                                                      &kp GRAVE              &trans              &trans              &trans                   &trans  &trans
+ &trans       &world_a_grave_mac            &kp EXCL             &world_e_acute_mac  &world_e_circumflex_mac    &kp AT                                                      &kp TILDE  &world_u_acute_mac  &world_i_acute_mac  &world_o_acute_mac  &world_o_circumflex_mac  &trans
+ &trans       &world_a_acute_mac           &kp QMARK                       &kp LPAR                 &kp RPAR  &kp PIPE                                                      &kp MINUS            &kp PLUS             &kp DQT             &kp SQT                &kp COLON  &trans
+ &trans  &world_a_circumflex_mac  &world_o_tilde_mac  &world_consonants_cedilla_mac       &world_a_tilde_mac  &kp BSLH  &trans  &trans  &trans  &trans  &kp LBRC  &kp RBRC  &kp UNDER           &kp EQUAL              &kp LT              &kp GT                &kp QMARK  &trans
+ &trans                   &trans              &trans                         &trans                   &trans            &trans  &trans  &trans  &trans    &trans    &trans                         &trans              &trans              &trans                   &trans  &trans
             >;
         };
 
@@ -336,8 +348,8 @@
             bindings = <
   &none      &none      &none      &none      &none                                                                           &none      &none      &none      &none        &none
   &none      &none      &none    &kp TAB    &kp DEL    &kp INS                                                   &kp INS    &kp DEL    &kp TAB  &kp SPACE  &sk LSHFT      &kp ESC
-  &none    &kp ESC  &kp SPACE    &kp RET   &kp BSPC  &kp LC(X)                                                  &kp HOME  &kp PG_UP  &kp PG_DN    &kp END  &kp PG_UP        &none
-  &none   &kp LGUI   &kp LALT  &kp LCTRL  &kp LSHFT  &kp LC(V)                                                  &kp LEFT   &kp DOWN     &kp UP  &kp RIGHT  &kp PG_DN        &none
+  &none      &none  &kp SPACE    &kp RET   &kp BSPC  &kp LC(X)                                                  &kp HOME  &kp PG_UP  &kp PG_DN    &kp END  &kp PG_UP        &none
+  &none    &kp ESC  &kp LCTRL   &kp LGUI   &kp LALT  &kp LC(V)                                                  &kp LEFT   &kp DOWN     &kp UP  &kp RIGHT  &kp PG_DN        &none
   &none  &sk LSHFT  &kp LC(Y)  &kp LC(Z)  &kp LC(A)  &kp LC(C)  &trans  &trans  &trans  &trans  &trans  &trans   &kp RET   &kp BSPC  &kp LC(Z)  &kp LC(Y)  &kp K_APP  &kp LG(DOT)
   &none     &trans     &trans     &trans     &trans             &trans  &trans  &trans  &trans  &trans  &trans               &trans     &trans     &trans     &trans        &none
             >;
@@ -347,8 +359,8 @@
             bindings = <
   &none      &none      &none      &none      &none                                                                           &none      &none      &none      &none              &none
   &none      &none      &none    &kp TAB    &kp DEL    &kp INS                                                   &kp INS    &kp DEL    &kp TAB  &kp SPACE  &sk LSHFT            &kp ESC
-  &none    &kp ESC  &kp SPACE    &kp RET   &kp BSPC  &kp LG(V)                                                  &kp HOME  &kp PG_UP  &kp PG_DN    &kp END  &kp PG_UP              &none
-  &none   &kp LGUI   &kp LALT  &kp LCTRL  &kp LSHFT  &kp LG(V)                                                  &kp LEFT   &kp DOWN     &kp UP  &kp RIGHT  &kp PG_DN              &none
+  &none      &none  &kp SPACE    &kp RET   &kp BSPC  &kp LG(V)                                                  &kp HOME  &kp PG_UP  &kp PG_DN    &kp END  &kp PG_UP              &none
+  &none    &kp ESC  &kp LCTRL   &kp LALT   &kp LGUI  &kp LG(V)                                                  &kp LEFT   &kp DOWN     &kp UP  &kp RIGHT  &kp PG_DN              &none
   &none  &sk LSHFT  &kp LG(Y)  &kp LG(Z)  &kp LG(A)  &kp LG(C)  &trans  &trans  &trans  &trans  &trans  &trans   &kp RET   &kp BSPC  &kp LG(Z)  &kp LG(Y)  &kp K_APP  &kp LC(LG(SPACE))
   &none     &trans     &trans     &trans     &trans             &trans  &trans  &trans  &trans  &trans  &trans               &trans     &trans     &trans     &trans              &none
             >;
@@ -415,7 +427,7 @@
        &to 0            &to 1            &none            &none            &none            &none                                                         &none   &none   &none   &none   &none           &none
        &none  &rgb_ug RGB_SPI  &rgb_ug RGB_SAI  &rgb_ug RGB_HUI  &rgb_ug RGB_BRI  &rgb_ug RGB_TOG                                                         &none   &none   &none   &none   &none           &none
  &bootloader  &rgb_ug RGB_SPD  &rgb_ug RGB_SAD  &rgb_ug RGB_HUD  &rgb_ug RGB_BRD  &rgb_ug RGB_EFF                                                         &none   &none   &none   &none   &none     &bootloader
-  &sys_reset            &none            &none            &none            &none            &none   &bt_2   &bt_3        &tog 9   &none   &none   &none   &none   &none   &none   &none   &none      &sys_reset
+  &sys_reset            &none            &none            &none            &none            &none   &bt_2   &bt_3       &tog 10   &none   &none   &none   &none   &none   &none   &none   &none      &sys_reset
        &none            &none            &none            &none            &none                    &bt_0   &bt_1  &out OUT_USB   &none   &none   &none           &none   &none   &none   &none           &none
             >;
         };

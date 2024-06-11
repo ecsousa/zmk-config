@@ -1,12 +1,24 @@
 
 behaviors {
+
     ht: hold_tap {
         compatible = "zmk,behavior-hold-tap";
         #binding-cells = <2>;
         flavor = "tap-preferred";
-        tapping-term-ms = <200>;
-        require-prior-idle-ms = <125>;
+        tapping-term-ms = <225>;
         bindings = <&kp>, <&kp>;
+        retro-tap;
+        quick-tap-ms = <225>;
+    };
+
+    lt: layer_tap {
+        compatible = "zmk,behavior-hold-tap";
+        #binding-cells = <2>;
+        flavor = "tap-preferred";
+        tapping-term-ms = <225>;
+        bindings = <&mo>, <&kp>;
+        retro-tap;
+        quick-tap-ms = <225>;
     };
 
 };
