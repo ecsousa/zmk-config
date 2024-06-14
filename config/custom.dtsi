@@ -1,3 +1,9 @@
+#include "hands.h"
+
+#define THUMB_TAPPING_TIME 225
+#define TAPPING_TIME 175
+#define IDLE_TIME 125
+
 
 behaviors {
 
@@ -5,20 +11,99 @@ behaviors {
         compatible = "zmk,behavior-hold-tap";
         #binding-cells = <2>;
         flavor = "tap-preferred";
-        tapping-term-ms = <225>;
+        tapping-term-ms = <TAPPING_TIME>;
+        bindings = <&kp>, <&kp>;
+        require-prior-idle-ms = <IDLE_TIME>;
+        quick-tap-ms = <TAPPING_TIME>;
+    };
+
+    lrt: left_retro_hold_tap {
+        compatible = "zmk,behavior-hold-tap";
+        #binding-cells = <2>;
+        flavor = "tap-preferred";
+        tapping-term-ms = <TAPPING_TIME>;
         bindings = <&kp>, <&kp>;
         retro-tap;
-        quick-tap-ms = <225>;
+        require-prior-idle-ms = <IDLE_TIME>;
+        quick-tap-ms = <TAPPING_TIME>;
+        hold-trigger-key-positions = <ALL_THUMBS RIGHT_HAND>;
+    };
+
+    rrt: right_retro_hold_tap {
+        compatible = "zmk,behavior-hold-tap";
+        #binding-cells = <2>;
+        flavor = "tap-preferred";
+        tapping-term-ms = <TAPPING_TIME>;
+        bindings = <&kp>, <&kp>;
+        retro-tap;
+        require-prior-idle-ms = <IDLE_TIME>;
+        quick-tap-ms = <TAPPING_TIME>;
+        hold-trigger-key-positions = <ALL_THUMBS LEFT_HAND>;
+    };
+
+    lrlt: left_retro_layer_tap {
+        compatible = "zmk,behavior-hold-tap";
+        #binding-cells = <2>;
+        flavor = "tap-preferred";
+        tapping-term-ms = <TAPPING_TIME>;
+        bindings = <&mo>, <&kp>;
+        retro-tap;
+        require-prior-idle-ms = <IDLE_TIME>;
+        quick-tap-ms = <TAPPING_TIME>;
+        hold-trigger-key-positions = <ALL_THUMBS RIGHT_HAND>;
+    };
+
+    rrlt: right_retro_layer_tap {
+        compatible = "zmk,behavior-hold-tap";
+        #binding-cells = <2>;
+        flavor = "tap-preferred";
+        tapping-term-ms = <TAPPING_TIME>;
+        bindings = <&mo>, <&kp>;
+        retro-tap;
+        require-prior-idle-ms = <IDLE_TIME>;
+        quick-tap-ms = <TAPPING_TIME>;
+        hold-trigger-key-positions = <ALL_THUMBS LEFT_HAND>;
     };
 
     lt: layer_tap {
         compatible = "zmk,behavior-hold-tap";
         #binding-cells = <2>;
         flavor = "tap-preferred";
-        tapping-term-ms = <225>;
+        tapping-term-ms = <THUMB_TAPPING_TIME>;
         bindings = <&mo>, <&kp>;
-        retro-tap;
-        quick-tap-ms = <225>;
+        require-prior-idle-ms = <IDLE_TIME>;
+        quick-tap-ms = <THUMB_TAPPING_TIME>;
+    };
+
+    lnav: left_nav {
+        compatible = "zmk,behavior-macro-one-param";
+        #binding-cells = <1>; // Must be 1
+        wait-ms = <30>;
+        bindings
+        = <&macro_tap &kp LBKT>
+        , <&macro_param_1to1>
+        , <&macro_tap &kp MACRO_PLACEHOLDER>
+        ;
+    };
+
+    rnav: right_nav {
+        compatible = "zmk,behavior-macro-one-param";
+        #binding-cells = <1>; // Must be 1
+        wait-ms = <30>;
+        bindings
+        = <&macro_tap &kp RBKT>
+        , <&macro_param_1to1>
+        , <&macro_tap &kp MACRO_PLACEHOLDER>
+        ;
+    };
+    
+    one: one_shot {
+        compatible = "zmk,behavior-sticky-key";
+        #binding-cells = <1>;
+        bindings = <&kp>;
+        release-after-ms = <2000>;
+        quick-release;
+        ignore-modifiers;
     };
 
 };
