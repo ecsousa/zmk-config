@@ -1,7 +1,7 @@
 #include "hands.h"
 
-#define THUMB_TAPPING_TIME 225
-#define TAPPING_TIME 175
+#define THUMB_TAPPING_TIME 250
+#define TAPPING_TIME 250
 #define IDLE_TIME 125
 
 
@@ -26,7 +26,8 @@ behaviors {
         retro-tap;
         require-prior-idle-ms = <IDLE_TIME>;
         quick-tap-ms = <TAPPING_TIME>;
-        hold-trigger-key-positions = <ALL_THUMBS RIGHT_HAND>;
+        //hold-trigger-key-positions = <ALL_THUMBS RIGHT_HAND>;
+        //hold-trigger-on-release;
     };
 
     rrt: right_retro_hold_tap {
@@ -38,7 +39,8 @@ behaviors {
         retro-tap;
         require-prior-idle-ms = <IDLE_TIME>;
         quick-tap-ms = <TAPPING_TIME>;
-        hold-trigger-key-positions = <ALL_THUMBS LEFT_HAND>;
+        //hold-trigger-key-positions = <ALL_THUMBS LEFT_HAND>;
+        //hold-trigger-on-release;
     };
 
     lrlt: left_retro_layer_tap {
@@ -50,7 +52,8 @@ behaviors {
         retro-tap;
         require-prior-idle-ms = <IDLE_TIME>;
         quick-tap-ms = <TAPPING_TIME>;
-        hold-trigger-key-positions = <ALL_THUMBS RIGHT_HAND>;
+        //hold-trigger-key-positions = <ALL_THUMBS RIGHT_HAND>;
+        //hold-trigger-on-release;
     };
 
     rrlt: right_retro_layer_tap {
@@ -62,7 +65,8 @@ behaviors {
         retro-tap;
         require-prior-idle-ms = <IDLE_TIME>;
         quick-tap-ms = <TAPPING_TIME>;
-        hold-trigger-key-positions = <ALL_THUMBS LEFT_HAND>;
+        //hold-trigger-key-positions = <ALL_THUMBS LEFT_HAND>;
+        //hold-trigger-on-release;
     };
 
     lt: layer_tap {
