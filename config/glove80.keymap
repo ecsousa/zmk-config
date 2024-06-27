@@ -294,12 +294,12 @@
 
         layer_QWERTY {
             bindings = <
-               &kp F1       &kp F2       &kp F3        &kp F4                 &kp F5                                                                                                                                                      &kp F6        &kp F7       &kp F8          &kp F9   &kp F10
-            &kp PG_UP       &kp N1       &kp N2        &kp N3                 &kp N4  &kp N5                                                                                                                       &kp N6                 &kp N7        &kp N8       &kp N9          &kp N0   &kp F11
-            &kp PG_DN        &kp Q        &kp W         &kp E                  &kp R   &kp T                                                                                                                        &kp Y                  &kp U         &kp I        &kp O           &kp P   &kp F12
-              &kp ESC  &lrt LGUI A  &lrt LALT S  &lrt LCTRL D           &lrt LSHFT F   &kp G                                                                                                                        &kp H          &rrt  LSHFT J  &rrt LCTRL K  &rrt LALT L  &rrt LGUI SEMI  &kp HOME
-           &caps_word        &kp Z        &kp X         &kp C  &lrlt LAYER_Accents V   &kp B                &kp ESC    &kp DEL               &kp ESC               &key_repeat     &mo 10                  &mo 11   &kp N  &rrlt LAYER_Accents M     &kp COMMA      &kp DOT        &kp FSLH   &kp END
- &magic LAYER_Magic 0      &kp TAB    &kp LCTRL      &kp LGUI               &kp LALT          &lt LAYER_Number BSPC  &kp LSHFT  &lt LAYER_Cursor TAB  &lt LAYER_Function ENTER  &kp LSHFT  &lt LAYER_Symbol SPACE                       &kp LALT      &kp LGUI    &kp LCTRL         &kp DEL    &lower
+               &kp F1       &kp F2       &kp F3        &kp F4        &kp F5                                                                                                                                              &kp F6        &kp F7       &kp F8          &kp F9   &kp F10
+            &kp PG_UP       &kp N1       &kp N2        &kp N3        &kp N4  &kp N5                                                                                                                       &kp N6         &kp N7        &kp N8       &kp N9          &kp N0   &kp F11
+            &kp PG_DN        &kp Q        &kp W         &kp E         &kp R   &kp T                                                                                                                        &kp Y          &kp U         &kp I        &kp O           &kp P   &kp F12
+              &kp ESC  &lrt LGUI A  &lrt LALT S  &lrt LCTRL D  &lrt LSHFT F   &kp G                                                                                                                        &kp H  &rrt  LSHFT J  &rrt LCTRL K  &rrt LALT L  &rrt LGUI SEMI  &kp HOME
+           &caps_word        &kp Z        &kp X         &kp C         &kp V   &kp B                &kp ESC    &kp DEL               &kp ESC               &key_repeat     &mo 10                  &mo 11   &kp N          &kp M     &kp COMMA      &kp DOT        &kp FSLH   &kp END
+ &magic LAYER_Magic 0    &kp LCTRL     &kp LGUI      &kp LALT         &mo 2          &lt LAYER_Number BSPC  &kp LSHFT  &lt LAYER_Cursor TAB  &lt LAYER_Function ENTER  &kp LSHFT  &lt LAYER_Symbol SPACE                  &mo 2      &kp LALT     &kp LGUI       &kp LCTRL    &lower
             >;
         };
 
